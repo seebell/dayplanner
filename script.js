@@ -25,81 +25,99 @@ var current8Int = parseInt(current8);
 var current9Int = parseInt(current9);
 
 // Storing user input in the local Storage
+// correlate what you save to the date it was saved
+    // on initial load, get today's date, compare with what's in local storage, and save that in localstorage
+    // when to wipe the events (when the date in localstorage is different from today's date)
+    $('#btn1').click(function() {
+      if($('#text1').val()) {
+        localStorage.removeItem('text1');
+      }
+    
+      const hour1String = JSON.stringify(hour1);
+      
+      localStorage.setItem(hour1, $('#text1').val());
+    });
+    
+    $('#btn2').click(function() {
+      if($('#text2').val()) {
+        localStorage.removeItem('text2');
+      }
+    
+      const hour2String = JSON.stringify(hour2);
+    
+      localStorage.setItem(hour2, $('#text2').val());
+    });
+    
+    $('#btn3').click(function() {
+      if($('#text3').val()) {
+        localStorage.removeItem('text3');
+      }
+    
+      const hour3String = JSON.stringify(hour3);
+    
+      localStorage.setItem(hour3, $('#text3').val());
+    });
+    
+    $('#btn4').click(function() {
+      if($('#text4').val()) {
+        localStorage.removeItem('text4');
+      }
+    
+      const hour4String = JSON.stringify(hour4);
+    
+      localStorage.setItem(hour4, $('#text4').val());
+    });
+    
+    $('#btn5').click(function() {
+      if($('#text5').val()) {
+        localStorage.removeItem('text5');
+      }
+    
+      const hour5String = JSON.stringify(hour5);
+    
+      localStorage.setItem(hour5, $('#text5').val());
+    });
+    
+    $('#btn6').click(function() {
+      if($('#text6').val()) {
+        localStorage.removeItem('text6');
+      }
+    
+      const hour6String = JSON.stringify(hour6);
+    
+      localStorage.setItem(hour6, $('#text6').val());
+    });
+    
+    $('#btn7').click(function() {
+      if($('#text7').val()) {
+        localStorage.removeItem('text7');
+      }
+    
+      const hour7String = JSON.stringify(hour7);
+    
+      localStorage.setItem(hour7, $('#text7').val());
+    })
+    
+    $('#btn8').click(function() {
+      if($('#text8').val()) {
+        localStorage.removeItem('text8');
+      }
+    
+      const hour8String = JSON.stringify(hour8);
+    
+      localStorage.setItem("text8", $('#text8').val());
+    })
+    
+    $('#btn9').click(function() { 
+      if($('#text9').val()) {
+        localStorage.removeItem('text9');
+      }
+    
+      const hour9String = JSON.stringify(hour9);
+    
+      localStorage.setItem(hour9, $('#text9').val());
+    }) 
 
-$('#btn1').on('click', firstClick())
-    function firstClick() {
-  if($('#text1').val()) {
-    localStorage.removeItem('text1');
-  }else{
-  
-  localStorage.setItem(current1, $('#text1').val());
-    }};
-
-$('#btn2').click(function() {
-  if($('#text2').val()) {
-    localStorage.removeItem('text2');
-  }else{
-
-  localStorage.setItem(current2, $('#text2').val());
-}});
-
-$('#btn3').click(function() {
-  if($('#text3').val()) {
-    localStorage.removeItem('text3');
-  }else{
-
-  localStorage.setItem(current3, $('#text3').val());
-}});
-
-$('#btn4').click(function() {
-  if($('#text4').val()) {
-    localStorage.removeItem('text4');
-  }else{
-
-  localStorage.setItem(current4, $('#text4').val());
-}});
-
-$('#btn5').click(function() {
-  if($('#text5').val()) {
-    localStorage.removeItem('text5');
-  }else{
-
-  localStorage.setItem(current5, $('#text5').val());
-}});
-
-$('#btn6').click(function() {
-  if($('#text6').val()) {
-    localStorage.removeItem('text6');
-  }else{
-
-  localStorage.setItem(current6, $('#text6').val());
-}});
-
-$('#btn7').click(function() {
-  if($('#text7').val()) {
-    localStorage.removeItem('text7');
-  }else{
-
-  localStorage.setItem(current7, $('#text7').val());
-}})
-
-$('#btn8').on('click', eightclick()) 
-   function eightclick() {
-  if($('#text8').val()) {
-    localStorage.removeItem('text8');
-  }else{
-  
-  localStorage.setItem(hour8, $('#text8').val());
-}}
-
-$('#btn9').on('click', ninthclick()) 
-    function ninthclick() {
-  if($('#text9').val()) {
-    localStorage.removeItem('text9');
-  }else{
-
-  localStorage.setItem(current9, $('#text9').val());
-}};
 
 // Displaying the time using moment.js
 
