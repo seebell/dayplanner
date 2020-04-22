@@ -26,95 +26,80 @@ var current9Int = parseInt(current9);
 
 // Storing user input in the local Storage
 
-$('#btn1').click(function() {
+$('#btn1').on('click', firstClick())
+    function firstClick() {
   if($('#text1').val()) {
     localStorage.removeItem('text1');
-  }
-
-  var current1String = JSON.stringify(current1);
+  }else{
   
   localStorage.setItem(current1, $('#text1').val());
-});
+    }};
 
 $('#btn2').click(function() {
   if($('#text2').val()) {
     localStorage.removeItem('text2');
-  }
-
-  var current2String = JSON.stringify(current2);
+  }else{
 
   localStorage.setItem(current2, $('#text2').val());
-});
+}});
 
 $('#btn3').click(function() {
   if($('#text3').val()) {
     localStorage.removeItem('text3');
-  }
-
-  var current3String = JSON.stringify(current3);
+  }else{
 
   localStorage.setItem(current3, $('#text3').val());
-});
+}});
 
 $('#btn4').click(function() {
   if($('#text4').val()) {
     localStorage.removeItem('text4');
-  }
-
-  var current4String = JSON.stringify(current4);
+  }else{
 
   localStorage.setItem(current4, $('#text4').val());
-});
+}});
 
 $('#btn5').click(function() {
   if($('#text5').val()) {
     localStorage.removeItem('text5');
-  }
-
-  var current5String = JSON.stringify(current5);
+  }else{
 
   localStorage.setItem(current5, $('#text5').val());
-});
+}});
 
 $('#btn6').click(function() {
   if($('#text6').val()) {
     localStorage.removeItem('text6');
-  }
-
-  var current6String = JSON.stringify(current6);
+  }else{
 
   localStorage.setItem(current6, $('#text6').val());
-});
+}});
 
 $('#btn7').click(function() {
   if($('#text7').val()) {
     localStorage.removeItem('text7');
-  }
-
-  var current7String = JSON.stringify(current7);
+  }else{
 
   localStorage.setItem(current7, $('#text7').val());
-})
+}})
 
-$('#btn8').click(function() {
+$('#btn8').on('click', eightclick()) 
+   function eightclick() {
   if($('#text8').val()) {
     localStorage.removeItem('text8');
-  }
+  }else{
+  
+  localStorage.setItem(hour8, $('#text8').val());
+}}
 
-  var current8String = JSON.stringify(current8);
-
-  localStorage.setItem("text8", $('#text8').val());
-})
-
-$('#btn9').click(function() { 
+$('#btn9').on('click', ninthclick()) 
+    function ninthclick() {
   if($('#text9').val()) {
     localStorage.removeItem('text9');
-  }
-
-  var current9String = JSON.stringify(current9);
+  }else{
 
   localStorage.setItem(current9, $('#text9').val());
-})
+}};
 
 // Displaying the time using moment.js
 
