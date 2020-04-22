@@ -1,39 +1,39 @@
 var clockNow = moment().format('dddd, MMMM Do YYYY');
-var hourNow = moment().format('h');
-var hourNow24= parseInt(moment().format('HH'));
-var hourNowInt = parseInt(hourNow);
+var currentNow = moment().format('h');
+var currentNow24= parseInt(moment().format('HH'));
+var currentNowInt = parseInt(currentNow);
 var Timer;
 
-var hour1 = $('#clock1').text();
-var hour2 = $('#clock2').text();
-var hour3 = $('#clock3').text();
-var hour4 = $('#clock4').text();
-var hour5 = $('#clock5').text();
-var hour6 = $('#clock6').text();
-var hour7 = $('#clock7').text();
-var hour8 = $('#clock8').text();
-var hour9 = $('#clock9').text();
+var current1 = $('#clock1').text();
+var current2 = $('#clock2').text();
+var current3 = $('#clock3').text();
+var current4 = $('#clock4').text();
+var current5 = $('#clock5').text();
+var current6 = $('#clock6').text();
+var current7 = $('#clock7').text();
+var current8 = $('#clock8').text();
+var current9 = $('#clock9').text();
 
-var hour1Int = parseInt(hour1);
-var hour2Int = parseInt(hour2);
-var hour3Int = parseInt(hour3);
-var hour4Int = parseInt(hour4);
-var hour5Int = parseInt(hour5);
-var hour6Int = parseInt(hour6);
-var hour7Int = parseInt(hour7);
-var hour8Int = parseInt(hour8);
-var hour9Int = parseInt(hour9);
+var current1Int = parseInt(current1);
+var current2Int = parseInt(current2);
+var current3Int = parseInt(current3);
+var current4Int = parseInt(current4);
+var current5Int = parseInt(current5);
+var current6Int = parseInt(current6);
+var current7Int = parseInt(current7);
+var current8Int = parseInt(current8);
+var current9Int = parseInt(current9);
 
-// Store user input in local Storage
+// Storing user input in the local Storage
 
 $('#btn1').click(function() {
   if($('#text1').val()) {
     localStorage.removeItem('text1');
   }
 
-  var hour1String = JSON.stringify(hour1);
+  var current1String = JSON.stringify(current1);
   
-  localStorage.setItem(hour1, $('#text1').val());
+  localStorage.setItem(current1, $('#text1').val());
 });
 
 $('#btn2').click(function() {
@@ -41,9 +41,9 @@ $('#btn2').click(function() {
     localStorage.removeItem('text2');
   }
 
-  var hour2String = JSON.stringify(hour2);
+  var current2String = JSON.stringify(current2);
 
-  localStorage.setItem(hour2, $('#text2').val());
+  localStorage.setItem(current2, $('#text2').val());
 });
 
 $('#btn3').click(function() {
@@ -51,9 +51,9 @@ $('#btn3').click(function() {
     localStorage.removeItem('text3');
   }
 
-  var hour3String = JSON.stringify(hour3);
+  var current3String = JSON.stringify(current3);
 
-  localStorage.setItem(hour3, $('#text3').val());
+  localStorage.setItem(current3, $('#text3').val());
 });
 
 $('#btn4').click(function() {
@@ -61,9 +61,9 @@ $('#btn4').click(function() {
     localStorage.removeItem('text4');
   }
 
-  var hour4String = JSON.stringify(hour4);
+  var current4String = JSON.stringify(current4);
 
-  localStorage.setItem(hour4, $('#text4').val());
+  localStorage.setItem(current4, $('#text4').val());
 });
 
 $('#btn5').click(function() {
@@ -71,9 +71,9 @@ $('#btn5').click(function() {
     localStorage.removeItem('text5');
   }
 
-  var hour5String = JSON.stringify(hour5);
+  var current5String = JSON.stringify(current5);
 
-  localStorage.setItem(hour5, $('#text5').val());
+  localStorage.setItem(current5, $('#text5').val());
 });
 
 $('#btn6').click(function() {
@@ -81,9 +81,9 @@ $('#btn6').click(function() {
     localStorage.removeItem('text6');
   }
 
-  var hour6String = JSON.stringify(hour6);
+  var current6String = JSON.stringify(current6);
 
-  localStorage.setItem(hour6, $('#text6').val());
+  localStorage.setItem(current6, $('#text6').val());
 });
 
 $('#btn7').click(function() {
@@ -91,9 +91,9 @@ $('#btn7').click(function() {
     localStorage.removeItem('text7');
   }
 
-  var hour7String = JSON.stringify(hour7);
+  var current7String = JSON.stringify(current7);
 
-  localStorage.setItem(hour7, $('#text7').val());
+  localStorage.setItem(current7, $('#text7').val());
 })
 
 $('#btn8').click(function() {
@@ -101,7 +101,7 @@ $('#btn8').click(function() {
     localStorage.removeItem('text8');
   }
 
-  var hour8String = JSON.stringify(hour8);
+  var current8String = JSON.stringify(current8);
 
   localStorage.setItem("text8", $('#text8').val());
 })
@@ -111,38 +111,38 @@ $('#btn9').click(function() {
     localStorage.removeItem('text9');
   }
 
-  var hour9String = JSON.stringify(hour9);
+  var current9String = JSON.stringify(current9);
 
-  localStorage.setItem(hour9, $('#text9').val());
+  localStorage.setItem(current9, $('#text9').val());
 })
 
-// Display the time using moment.js
+// Displaying the time using moment.js
 
 $('#currentDay').append(clockNow);
 
-// Color coding to reflect whether the time slot is in the past, the present or the future 
+// Adding color change to reflect whether the time slot is in the past, the present or the future 
 
-colorCoding();
+colorChange();
 
-function colorCoding() {
+function colorChange() {
 
-  TIMER = setInterval(colorCoding, 1000);
-  // Test check: hourNow24 = 20;
-  if(hourNow24 >= 9 && hourNow24 <= 17) {
+  TIMER = setInterval(colorChange, 1000);
+  
+  if(currentNow24 >= 9 && currentNow24 <= 17) {
 
     for (var i =1; i<=9 ; i++) { 
-     var hourInInt = parseInt($('#clock'+i).text());
+     var currentInInt = parseInt($('#clock'+i).text());
 
-      if (hourInInt < 9) {
-        hourInInt = hourInInt + 12;
+      if (currentInInt < 9) {
+        currentInInt = currentInInt + 12;
       }
       
-      if (hourInInt == hourNow24) {
+      if (currentInInt == currentNow24) {
         $('#text'+i).css('background-color', '#FB8F78');
         continue;
       }
       
-      if (hourInInt < hourNow24) {
+      if (currentInInt < currentNow24) {
         $('#text'+i).css('background-color', 'lightgray');
       } 
       else {
