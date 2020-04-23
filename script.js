@@ -30,7 +30,7 @@ var current9Int = parseInt(current9);
     // when to wipe the events (when the date in localstorage is different from today's date)
     
   
-     $(document).ready(function() { 
+      
 
      $('#btn1').on("click",function() {
        if($('#text1').val()) {
@@ -110,7 +110,7 @@ var current9Int = parseInt(current9);
        localStorage.setItem(current9, $('#text9').val());
      }) 
 
-     });
+     
 // Displaying the time using moment.js
 
 $('#currentDay').append(clockNow);
@@ -151,3 +151,15 @@ function colorChange() {
     $('textarea').css('background-color', 'pink');
   }
 }
+
+var test = localStorage.getItem("11AM");
+console.log(test);
+$("#text1").val(localStorage.getItem("9AM"));
+$("#text2").val(localStorage.getItem("10AM"));
+$("#text3").val(localStorage.getItem("11AM"));
+$("#text4").val(localStorage.getItem("12PM"));
+$("#text5").val(localStorage.getItem("1PM"));
+$("#text6").val(localStorage.getItem("2PM"));
+$("#text7").val(localStorage.getItem("3PM"));
+$("#text8").val(localStorage.getItem("4PM"));
+$("#text9").val(localStorage.getItem("5PM"));
