@@ -32,10 +32,8 @@ var current9Int = parseInt(current9);
       if($('#text1').val()) {
         localStorage.removeItem('text1');
       }
-    
-      const hour1String = JSON.stringify(hour1);
       
-      localStorage.setItem(hour1, $('#text1').val());
+      localStorage.setItem(current1, $('#text1').val());
     });
     
     $('#btn2').click(function() {
@@ -43,19 +41,16 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text2');
       }
     
-      const hour2String = JSON.stringify(hour2);
-    
-      localStorage.setItem(hour2, $('#text2').val());
+      localStorage.setItem(current2, $('#text2').val());
     });
     
     $('#btn3').click(function() {
       if($('#text3').val()) {
         localStorage.removeItem('text3');
       }
+
     
-      const hour3String = JSON.stringify(hour3);
-    
-      localStorage.setItem(hour3, $('#text3').val());
+      localStorage.setItem(current3, $('#text3').val());
     });
     
     $('#btn4').click(function() {
@@ -63,9 +58,8 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text4');
       }
     
-      const hour4String = JSON.stringify(hour4);
     
-      localStorage.setItem(hour4, $('#text4').val());
+      localStorage.setItem(current4, $('#text4').val());
     });
     
     $('#btn5').click(function() {
@@ -73,9 +67,8 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text5');
       }
     
-      const hour5String = JSON.stringify(hour5);
     
-      localStorage.setItem(hour5, $('#text5').val());
+      localStorage.setItem(current5, $('#text5').val());
     });
     
     $('#btn6').click(function() {
@@ -83,9 +76,8 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text6');
       }
     
-      const hour6String = JSON.stringify(hour6);
     
-      localStorage.setItem(hour6, $('#text6').val());
+      localStorage.setItem(current6, $('#text6').val());
     });
     
     $('#btn7').click(function() {
@@ -93,9 +85,8 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text7');
       }
     
-      const hour7String = JSON.stringify(hour7);
     
-      localStorage.setItem(hour7, $('#text7').val());
+      localStorage.setItem(current7, $('#text7').val());
     })
     
     $('#btn8').click(function() {
@@ -103,9 +94,8 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text8');
       }
     
-      const hour8String = JSON.stringify(hour8);
     
-      localStorage.setItem("text8", $('#text8').val());
+      localStorage.setItem(current8, $('#text8').val());
     })
     
     $('#btn9').click(function() { 
@@ -113,9 +103,7 @@ var current9Int = parseInt(current9);
         localStorage.removeItem('text9');
       }
     
-      const hour9String = JSON.stringify(hour9);
-    
-      localStorage.setItem(hour9, $('#text9').val());
+      localStorage.setItem(current9, $('#text9').val());
     }) 
 
 
