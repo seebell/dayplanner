@@ -23,11 +23,6 @@ var current6Int = parseInt(current6);
 var current7Int = parseInt(current7);
 var current8Int = parseInt(current8);
 var current9Int = parseInt(current9);
-
-// Storing user input in the local Storage
-// correlate what you save to the date it was saved
-    // on initial load, get today's date, compare with what's in local storage, and save that in localstorage
-    // when to wipe the events (when the date in localstorage is different from today's date)
     
      $(".btn-info").on("click", function(event) {
        console.log(event.target.previousElementSibling.id);
@@ -36,92 +31,9 @@ var current9Int = parseInt(current9);
        var value = event.target.previousElementSibling.value;
        localStorage.setItem(key, value);
      })
-      
-
-    //  $('#btn1').on("click",function() {
-    //    if($('#text1').val()) {
-    //     localStorage.removeItem('text1');
-    //   }
-      
-    //    localStorage.setItem(current1, $('#text1').val());
-    //  });
     
-    //  $('#btn2').on("click",function() {
-    //   if($('#text2').val()) {
-    //      localStorage.removeItem('text2');
-    //    }
-    
-    //    localStorage.setItem(current2, $('#text2').val());
-    //  });
-    
-    //  $('#btn3').on("click",function() {
-    //    if($('#text3').val()) {
-    //      localStorage.removeItem('text3');
-    //    }
-
-    
-    //    localStorage.setItem(current3, $('#text3').val());
-    //  });
-    
-    //  $('#btn4').on("click",function() {
-    //    if($('#text4').val()) {
-    //      localStorage.removeItem('text4');
-    //    }
-    
-    
-    //    localStorage.setItem(current4, $('#text4').val());
-    //  });
-    
-    //  $('#btn5').on("click",function() {
-    //    if($('#text5').val()) {
-    //      localStorage.removeItem('text5');
-    //    }
-    
-    
-    //    localStorage.setItem(current5, $('#text5').val());
-    //  });
-    
-    //  $('#btn6').on("click",function() {
-    //    if($('#text6').val()) {
-    //      localStorage.removeItem('text6');
-    //    }
-    
-    
-    //    localStorage.setItem(current6, $('#text6').val());
-    //  });
-    
-    //  $('#btn7').on("click",function() {
-    //    if($('#text7').val()) {
-    //      localStorage.removeItem('text7');
-    //    }
-    
-    
-    //    localStorage.setItem(current7, $('#text7').val());
-    //  })
-    
-    //  $('#btn8').on("click",function() {
-    //    if($('#text8').val()) {
-    //      localStorage.removeItem('text8');
-    //    }
-    
-    
-    //    localStorage.setItem(current8, $('#text8').val());
-    //  })
-    
-    //  $('#btn9').on("click",function() { 
-    //   if($('#text9').val()) {
-    //      localStorage.removeItem('text9');
-    //   }
-    
-    //    localStorage.setItem(current9, $('#text9').val());
-    //  }) 
-
-     
-// Displaying the time using moment.js
 
 $('#currentDay').append(clockNow);
-
-// Adding color change to reflect whether the time slot is in the past, the present or the future 
 
 colorChange();
 
@@ -139,7 +51,7 @@ function colorChange() {
       }
       
       if (currentInInt == currentNow24) {
-        $('#text'+i).css('background-color', '#FB8F78');
+        $('#text'+i).css('background-color', 'red');
         continue;
       }
       
@@ -157,7 +69,6 @@ function colorChange() {
     $('textarea').css('background-color', 'pink');
   }
 }
-
 
 $("#text1").val(localStorage.getItem("text1"));
 $("#text2").val(localStorage.getItem("text2"));
@@ -183,11 +94,6 @@ if (storedDate !== clockNow) {
   localStorage.removeItem("text7");
   localStorage.removeItem("text8");
   localStorage.removeItem("text9");
-  var dateInStorage = localStorage.setItem("clockNow", clockNow);
-  
   } 
-// } else {
-//     localStorage.clear();
-//     var dateInStorage = localStorage.setItem("clockNow", clockNow);
 
-//   }
+
