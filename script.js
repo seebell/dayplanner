@@ -29,86 +29,92 @@ var current9Int = parseInt(current9);
     // on initial load, get today's date, compare with what's in local storage, and save that in localstorage
     // when to wipe the events (when the date in localstorage is different from today's date)
     
-  
+     $(".btn-info").on("click", function(event) {
+       console.log(event.target.previousElementSibling.id);
+       console.log(event);
+       var key = event.target.previousElementSibling.id;
+       var value = event.target.previousElementSibling.value;
+       localStorage.setItem(key, value);
+     })
       
 
-     $('#btn1').on("click",function() {
-       if($('#text1').val()) {
-        localStorage.removeItem('text1');
-      }
+    //  $('#btn1').on("click",function() {
+    //    if($('#text1').val()) {
+    //     localStorage.removeItem('text1');
+    //   }
       
-       localStorage.setItem(current1, $('#text1').val());
-     });
+    //    localStorage.setItem(current1, $('#text1').val());
+    //  });
     
-     $('#btn2').on("click",function() {
-      if($('#text2').val()) {
-         localStorage.removeItem('text2');
-       }
+    //  $('#btn2').on("click",function() {
+    //   if($('#text2').val()) {
+    //      localStorage.removeItem('text2');
+    //    }
     
-       localStorage.setItem(current2, $('#text2').val());
-     });
+    //    localStorage.setItem(current2, $('#text2').val());
+    //  });
     
-     $('#btn3').on("click",function() {
-       if($('#text3').val()) {
-         localStorage.removeItem('text3');
-       }
+    //  $('#btn3').on("click",function() {
+    //    if($('#text3').val()) {
+    //      localStorage.removeItem('text3');
+    //    }
 
     
-       localStorage.setItem(current3, $('#text3').val());
-     });
+    //    localStorage.setItem(current3, $('#text3').val());
+    //  });
     
-     $('#btn4').on("click",function() {
-       if($('#text4').val()) {
-         localStorage.removeItem('text4');
-       }
-    
-    
-       localStorage.setItem(current4, $('#text4').val());
-     });
-    
-     $('#btn5').on("click",function() {
-       if($('#text5').val()) {
-         localStorage.removeItem('text5');
-       }
+    //  $('#btn4').on("click",function() {
+    //    if($('#text4').val()) {
+    //      localStorage.removeItem('text4');
+    //    }
     
     
-       localStorage.setItem(current5, $('#text5').val());
-     });
+    //    localStorage.setItem(current4, $('#text4').val());
+    //  });
     
-     $('#btn6').on("click",function() {
-       if($('#text6').val()) {
-         localStorage.removeItem('text6');
-       }
-    
-    
-       localStorage.setItem(current6, $('#text6').val());
-     });
-    
-     $('#btn7').on("click",function() {
-       if($('#text7').val()) {
-         localStorage.removeItem('text7');
-       }
+    //  $('#btn5').on("click",function() {
+    //    if($('#text5').val()) {
+    //      localStorage.removeItem('text5');
+    //    }
     
     
-       localStorage.setItem(current7, $('#text7').val());
-     })
+    //    localStorage.setItem(current5, $('#text5').val());
+    //  });
     
-     $('#btn8').on("click",function() {
-       if($('#text8').val()) {
-         localStorage.removeItem('text8');
-       }
+    //  $('#btn6').on("click",function() {
+    //    if($('#text6').val()) {
+    //      localStorage.removeItem('text6');
+    //    }
     
     
-       localStorage.setItem(current8, $('#text8').val());
-     })
+    //    localStorage.setItem(current6, $('#text6').val());
+    //  });
     
-     $('#btn9').on("click",function() { 
-      if($('#text9').val()) {
-         localStorage.removeItem('text9');
-      }
+    //  $('#btn7').on("click",function() {
+    //    if($('#text7').val()) {
+    //      localStorage.removeItem('text7');
+    //    }
     
-       localStorage.setItem(current9, $('#text9').val());
-     }) 
+    
+    //    localStorage.setItem(current7, $('#text7').val());
+    //  })
+    
+    //  $('#btn8').on("click",function() {
+    //    if($('#text8').val()) {
+    //      localStorage.removeItem('text8');
+    //    }
+    
+    
+    //    localStorage.setItem(current8, $('#text8').val());
+    //  })
+    
+    //  $('#btn9').on("click",function() { 
+    //   if($('#text9').val()) {
+    //      localStorage.removeItem('text9');
+    //   }
+    
+    //    localStorage.setItem(current9, $('#text9').val());
+    //  }) 
 
      
 // Displaying the time using moment.js
@@ -153,30 +159,35 @@ function colorChange() {
 }
 
 
-$("#text1").val(localStorage.getItem("9AM"));
-$("#text2").val(localStorage.getItem("10AM"));
-$("#text3").val(localStorage.getItem("11AM"));
-$("#text4").val(localStorage.getItem("12PM"));
-$("#text5").val(localStorage.getItem("1PM"));
-$("#text6").val(localStorage.getItem("2PM"));
-$("#text7").val(localStorage.getItem("3PM"));
-$("#text8").val(localStorage.getItem("4PM"));
-$("#text9").val(localStorage.getItem("5PM"));
+$("#text1").val(localStorage.getItem("text1"));
+$("#text2").val(localStorage.getItem("text2"));
+$("#text3").val(localStorage.getItem("text3"));
+$("#text4").val(localStorage.getItem("text4"));
+$("#text5").val(localStorage.getItem("text5"));
+$("#text6").val(localStorage.getItem("text6"));
+$("#text7").val(localStorage.getItem("text7"));
+$("#text8").val(localStorage.getItem("text8"));
+$("#text9").val(localStorage.getItem("text9"));
 
 var storedDate = localStorage.getItem("clockNow");
+console.log(storedDate);
 
+if (storedDate !== clockNow) {
 
-
-if (storedDate == clockNow) {
-  for (var i = 0; i < localStorage.length; i++) {
-    // var key = localstorage.key(i);
-    // var value = localStorage.getItem(key);
-    // var textId = '#text1' + key;
-    $(textId).val(value);
-    console.log(test);
+  localStorage.removeItem("text1");
+  localStorage.removeItem("text2");
+  localStorage.removeItem("text3");
+  localStorage.removeItem("text4");
+  localStorage.removeItem("text5");
+  localStorage.removeItem("text6");
+  localStorage.removeItem("text7");
+  localStorage.removeItem("text8");
+  localStorage.removeItem("text9");
+  var dateInStorage = localStorage.setItem("clockNow", clockNow);
+  
   } 
-} else {
-    localStorage.clear();
-    var dateInStorage = localStorage.setItem("clockNow", clockNow);
+// } else {
+//     localStorage.clear();
+//     var dateInStorage = localStorage.setItem("clockNow", clockNow);
 
-  }
+//   }
