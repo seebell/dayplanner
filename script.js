@@ -152,8 +152,7 @@ function colorChange() {
   }
 }
 
-var test = localStorage.getItem("11AM");
-console.log(test);
+
 $("#text1").val(localStorage.getItem("9AM"));
 $("#text2").val(localStorage.getItem("10AM"));
 $("#text3").val(localStorage.getItem("11AM"));
@@ -163,3 +162,21 @@ $("#text6").val(localStorage.getItem("2PM"));
 $("#text7").val(localStorage.getItem("3PM"));
 $("#text8").val(localStorage.getItem("4PM"));
 $("#text9").val(localStorage.getItem("5PM"));
+
+var storedDate = localStorage.getItem("clockNow");
+
+
+
+if (storedDate == clockNow) {
+  for (var i = 0; i < localStorage.length; i++) {
+    // var key = localstorage.key(i);
+    // var value = localStorage.getItem(key);
+    // var textId = '#text1' + key;
+    $(textId).val(value);
+    console.log(test);
+  } 
+} else {
+    localStorage.clear();
+    var dateInStorage = localStorage.setItem("clockNow", clockNow);
+
+  }
