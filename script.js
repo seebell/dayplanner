@@ -70,16 +70,6 @@ function colorChange() {
   }
 }
 
-$("#text1").val(localStorage.getItem("text1"));
-$("#text2").val(localStorage.getItem("text2"));
-$("#text3").val(localStorage.getItem("text3"));
-$("#text4").val(localStorage.getItem("text4"));
-$("#text5").val(localStorage.getItem("text5"));
-$("#text6").val(localStorage.getItem("text6"));
-$("#text7").val(localStorage.getItem("text7"));
-$("#text8").val(localStorage.getItem("text8"));
-$("#text9").val(localStorage.getItem("text9"));
-
 var storedDate = localStorage.getItem("clockNow");
 console.log(storedDate);
 
@@ -94,6 +84,18 @@ if (storedDate !== clockNow) {
   localStorage.removeItem("text7");
   localStorage.removeItem("text8");
   localStorage.removeItem("text9");
+  
   } 
+else{
 
+$("#text1").val(localStorage.getItem("text1"));
+$("#text2").val(localStorage.getItem("text2"));
+$("#text3").val(localStorage.getItem("text3"));
+$("#text4").val(localStorage.getItem("text4"));
+$("#text5").val(localStorage.getItem("text5"));
+$("#text6").val(localStorage.getItem("text6"));
+$("#text7").val(localStorage.getItem("text7"));
+$("#text8").val(localStorage.getItem("text8"));
+$("#text9").val(localStorage.getItem("text9"));
+}
 
