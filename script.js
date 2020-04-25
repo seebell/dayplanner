@@ -51,7 +51,7 @@ function colorChange() {
       }
       
       if (currentInInt == currentNow24) {
-        $('#text'+i).css('background-color', 'red');
+        $('#text'+i).css('background-color', '#ff6961');
         continue;
       }
       
