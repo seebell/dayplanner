@@ -14,7 +14,7 @@ var current7 = $('#clock7').text();
 var current8 = $('#clock8').text();
 var current9 = $('#clock9').text();
 
-var current1Int = parseInt(current1);
+var currentInt = parseInt(current1);
 var current2Int = parseInt(current2);
 var current3Int = parseInt(current3);
 var current4Int = parseInt(current4);
