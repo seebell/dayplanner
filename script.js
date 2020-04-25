@@ -70,7 +70,8 @@ function colorChange() {
   }
 }
 
-var storedDate = localStorage.getItem("clockNow");
+// var storedDate = localStorage.getItem("clockNow");
+// console.log(clockNow);
 
 if (storedDate !== clockNow) {
 
