@@ -71,7 +71,6 @@ function colorChange() {
 }
 
 var storedDate = localStorage.getItem("clockNow");
-// console.log(storedDate);
 
 if (storedDate !== clockNow) {
 
