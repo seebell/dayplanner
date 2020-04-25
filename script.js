@@ -97,7 +97,6 @@ else{
  $("#text7").val(localStorage.getItem("text7"));
  $("#text8").val(localStorage.getItem("text8"));
  $("#text9").val(localStorage.getItem("text9"));
-  console.log("text9");
 }
 
   
