@@ -27,9 +27,9 @@ var current9Int = parseInt(current9);
      $(".btn-info").on("click", function(event) {
        console.log(event.target.previousElementSibling.id);
        console.log(event);
-       var key = event.target.previousElementSibling.id;
-       var value = event.target.previousElementSibling.value;
-       localStorage.setItem(key, value);
+       var textKey = event.target.previousElementSibling.id;
+       var textAreaValue = event.target.previousElementSibling.value;
+       localStorage.setItem(textKey, textAreaValue);
      })
     
 
@@ -89,14 +89,16 @@ if (storedDate !== clockNow) {
   } 
 else{
 
-$("#text1").val(localStorage.getItem("text1"));
-$("#text2").val(localStorage.getItem("text2"));
-$("#text3").val(localStorage.getItem("text3"));
-$("#text4").val(localStorage.getItem("text4"));
-$("#text5").val(localStorage.getItem("text5"));
-$("#text6").val(localStorage.getItem("text6"));
-$("#text7").val(localStorage.getItem("text7"));
-$("#text8").val(localStorage.getItem("text8"));
-$("#text9").val(localStorage.getItem("text9"));
+  $("#text1").val(localStorage.getItem("text1"));
+  $("#text2").val(localStorage.getItem("text2"));
+  $("#text3").val(localStorage.getItem("text3"));
+  $("#text4").val(localStorage.getItem("text4"));
+  $("#text5").val(localStorage.getItem("text5"));
+  $("#text6").val(localStorage.getItem("text6"));
+  $("#text7").val(localStorage.getItem("text7"));
+  $("#text8").val(localStorage.getItem("text8"));
+  $("#text9").val(localStorage.getItem("text9"));
+  
 }
 
+  
