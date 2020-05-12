@@ -70,25 +70,13 @@ function colorChange() {
   }
 }
 
-
+ 
  var storedDate = localStorage.getItem("clockNow");
  console.log(clockNow);
+ console.log(storedDate);
 
-if (storedDate !== clockNow) {
-
-  localStorage.removeItem("text1");
-  localStorage.removeItem("text2");
-  localStorage.removeItem("text3");
-  localStorage.removeItem("text4");
-  localStorage.removeItem("text5");
-  localStorage.removeItem("text6");
-  localStorage.removeItem("text7");
-  localStorage.removeItem("text8");
-  localStorage.removeItem("text9");
-  
-  } 
-else{
- $("#text1").val(localStorage.getItem("text1"));
+if (storedDate === clockNow) {
+  $("#text1").val(localStorage.getItem("text1"));
  $("#text2").val(localStorage.getItem("text2"));
  $("#text3").val(localStorage.getItem("text3"));
  $("#text4").val(localStorage.getItem("text4"));
@@ -98,5 +86,18 @@ else{
  $("#text8").val(localStorage.getItem("text8"));
  $("#text9").val(localStorage.getItem("text9"));
 }
+else {
+  localStorage.removeItem("text1");
+  localStorage.removeItem("text2");
+  localStorage.removeItem("text3");
+  localStorage.removeItem("text4");
+  localStorage.removeItem("text5");
+  localStorage.removeItem("text6");
+  localStorage.removeItem("text7");
+  localStorage.removeItem("text8");
+  localStorage.removeItem("text9");
+}
+localStorage.setItem("clockNow", clockNow);
+ 
 
   
